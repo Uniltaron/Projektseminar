@@ -1,0 +1,23 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <skos:Concept rdf:about="http://www.example.org/concepts#laptops">
+    <skos:prefLabel>notebook computers</skos:prefLabel>
+    <skos:changeNote rdf:parseType="Resource">
+      <rdf:value>The preferred label for this concept changed from 'laptop computers' to 
+      'notebook computers' on 23 Jan 1999.</rdf:value>
+      <dc:creator>
+        <foaf:Person>
+          <foaf:name>John Smith</foaf:name>
+          <foaf:mbox rdf:resource="mailto:jsmith@example.org"/>
+        </foaf:Person>
+      </dc:creator>
+      <dc:date>1999-01-23</dc:date>
+    </skos:changeNote>
+  </skos:Concept>
+
+</rdf:RDF>
+

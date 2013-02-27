@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+  <skos:Concept rdf:about="http://www.example.com/concepts#pineapples">
+    <skos:prefLabel xml:lang="en">pineapples</skos:prefLabel>
+    <skos:definition xml:lang="en">The fruit of plants of the family Bromeliaceae.</skos:definition>
+    <skos:prefLabel xml:lang="fr">ananas</skos:prefLabel>
+    <skos:definition xml:lang="fr">Le fruit de la plante herbacée de la famille des broméliacées.</skos:definition>
+  </skos:Concept>
+
+</rdf:RDF>
+

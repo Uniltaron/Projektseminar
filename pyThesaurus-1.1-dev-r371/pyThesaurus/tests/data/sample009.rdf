@@ -1,0 +1,29 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <skos:Concept rdf:about="http://www.example.com/concepts#botany">
+    <skos:prefLabel>botany</skos:prefLabel>
+    <skos:scopeNote>
+      <foaf:Document rdf:about="http://www.example.com/notes/botany.txt">
+        <dc:creator>
+          <foaf:Person>
+            <foaf:name>John Smith</foaf:name>
+            <foaf:mbox rdf:resource="mailto:jsmith@example.org"/>
+          </foaf:Person>
+        </dc:creator>
+        <dc:language>
+          <dcterms:RFC1766>
+            <rdf:value>EN</rdf:value>
+            <rdfs:label>English</rdfs:label>
+          </dcterms:RFC1766>
+        </dc:language>
+      </foaf:Document>
+    </skos:scopeNote>
+  </skos:Concept>
+
+</rdf:RDF>

@@ -1,0 +1,13 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  
+  <rdf:Description rdf:about="http://www.example.com/concepts#milk">
+    <skos:narrower rdf:resource="http://www.example.com/concepts#buffalomilk"/>
+    <skos:narrower rdf:resource="http://www.example.com/concepts#cowmilk"/>
+    <skos:narrower rdf:resource="http://www.example.com/concepts#goatmilk"/>
+    <skos:narrower rdf:resource="http://www.example.com/concepts#sheepmilk"/>
+  </rdf:Description>
+
+</rdf:RDF>
+

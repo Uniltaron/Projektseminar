@@ -1,0 +1,3 @@
+wetness;dryness
+shrubs;bushes
+rocks;basalt;granite;slate

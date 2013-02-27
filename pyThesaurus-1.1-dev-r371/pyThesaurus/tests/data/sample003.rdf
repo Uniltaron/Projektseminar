@@ -1,0 +1,13 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+  <skos:Concept rdf:about="http://www.example.com/concepts#shrubs">
+    <skos:prefLabel xml:lang="en">shrubs</skos:prefLabel>
+    <skos:altLabel xml:lang="en">bushes</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">arbuste</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">buisson</skos:altLabel>
+  </skos:Concept>
+
+</rdf:RDF>
+

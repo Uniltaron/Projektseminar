@@ -1,0 +1,10 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  
+  <skos:Concept rdf:about="http://www.example.com/concepts#zoology">
+    <skos:prefLabel>zoology</skos:prefLabel>
+    <skos:scopeNote rdf:resource="http://www.example.com/notes/zoology.txt"/>
+  </skos:Concept>
+
+</rdf:RDF>

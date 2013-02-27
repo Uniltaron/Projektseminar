@@ -1,0 +1,3 @@
+wetness;dryness # Comentado
+shrubs;bushes
+rocks;basalt;granite;slate

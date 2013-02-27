@@ -1,0 +1,5 @@
+* Bug: ioSKOSCore write narrower and broader terms with errors.
+* Bug: A term having an @ fails.
+* Test Concept.has_equivalents_terms.
+* Test new method Thesaurus.concepts_search_ids
+* Ding format allows several asceptions. Add a new context for each one?

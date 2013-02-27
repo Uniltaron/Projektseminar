@@ -1,0 +1,13 @@
+<rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+  <skos:Concept rdf:about="http://www.example.com/concepts#abattoirs">
+    <skos:prefLabel>abattoirs</skos:prefLabel>
+    <skos:hiddenLabel>abatoirs</skos:hiddenLabel>
+    <skos:hiddenLabel>abbatoirs</skos:hiddenLabel>
+    <skos:hiddenLabel>abbattoirs</skos:hiddenLabel>
+  </skos:Concept>
+
+</rdf:RDF>
+

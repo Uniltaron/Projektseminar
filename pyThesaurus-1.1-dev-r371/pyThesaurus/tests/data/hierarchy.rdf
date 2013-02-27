@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<skos:Concept rdf:about="http://platecom.inter-cultura.com/concepts#xnodo1@es"><skos:altLabel xml:lang="es">xnodo1</skos:altLabel><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo2@es">xnodo2</skos:narrower><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo3@es">xnodo3</skos:narrower></skos:Concept>
+
+<skos:Concept rdf:about="http://platecom.inter-cultura.com/concepts#xnodo9@es"><skos:altLabel xml:lang="es">xnodo9</skos:altLabel><skos:broader rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo8@es">xnodo8</skos:broader><skos:broader rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo3@es">xnodo3</skos:broader></skos:Concept>
+
+<skos:Concept rdf:about="http://platecom.inter-cultura.com/concepts#xnodo4@es"><skos:altLabel xml:lang="es">xnodo4</skos:altLabel><skos:broader rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo3@es">xnodo3</skos:broader><skos:broader rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo8@es">xnodo8</skos:broader><skos:broader rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo7@es">xnodo7</skos:broader></skos:Concept>
+
+<skos:Concept rdf:about="http://platecom.inter-cultura.com/concepts#xnodo2@es"><skos:altLabel xml:lang="es">xnodo2</skos:altLabel><skos:broader rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo1@es">xnodo1</skos:broader></skos:Concept>
+
+<skos:Concept rdf:about="http://platecom.inter-cultura.com/concepts#xnodo3@es"><skos:altLabel xml:lang="es">xnodo3</skos:altLabel><skos:broader rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo1@es">xnodo1</skos:broader><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo4@es">xnodo4</skos:narrower><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo9@es">xnodo9</skos:narrower></skos:Concept>
+
+<skos:Concept rdf:about="http://platecom.inter-cultura.com/concepts#xnodo6@es"><skos:altLabel xml:lang="es">xnodo6</skos:altLabel><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo7@es">xnodo7</skos:narrower><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo5@es">xnodo5</skos:narrower><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo8@es">xnodo8</skos:narrower></skos:Concept>
+
+<skos:Concept rdf:about="http://platecom.inter-cultura.com/concepts#xnodo7@es"><skos:altLabel xml:lang="es">xnodo7</skos:altLabel><skos:broader rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo6@es">xnodo6</skos:broader><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo4@es">xnodo4</skos:narrower></skos:Concept>
+
+<skos:Concept rdf:about="http://platecom.inter-cultura.com/concepts#xnodo5@es"><skos:altLabel xml:lang="es">xnodo5</skos:altLabel><skos:broader rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo6@es">xnodo6</skos:broader></skos:Concept>
+
+<skos:Concept rdf:about="http://platecom.inter-cultura.com/concepts#xnodo6@es"><skos:altLabel xml:lang="es">xnodo6</skos:altLabel><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo5@es">xnodo5</skos:narrower><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo7@es">xnodo7</skos:narrower><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo8@es">xnodo8</skos:narrower></skos:Concept>
+
+<skos:Concept rdf:about="http://platecom.inter-cultura.com/concepts#xnodo8@es"><skos:altLabel xml:lang="es">xnodo8</skos:altLabel><skos:broader rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo6@es">xnodo6</skos:broader><skos:narrower rdf:resource="http://platecom.inter-cultura.com/concepts#xnodo4@es">xnodo4</skos:narrower></skos:Concept></rdf:RDF>
+

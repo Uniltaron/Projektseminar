@@ -1,0 +1,11 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  
+	<skos:Concept rdf:about="http://www.example.org/concepts#bananarepublic">
+	<skos:prefLabel>banana republic</skos:prefLabel>
+	<skos:definition>A small country, especially in South and Central America, that is
+		poor and often badly and immorally ruled.</skos:definition>
+	</skos:Concept>
+</rdf:RDF>
+

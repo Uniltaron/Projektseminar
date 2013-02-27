@@ -1,0 +1,22 @@
+<rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+  <skos:Concept rdf:about="http://www.example.com/concepts#wetness">
+    <skos:prefLabel>wetness</skos:prefLabel>
+    <skos:altLabel>dryness</skos:altLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://www.example.com/concepts#shrubs">
+    <skos:prefLabel>shrubs</skos:prefLabel>
+    <skos:altLabel>bushes</skos:altLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://www.example.com/concepts#rocks">
+    <skos:prefLabel>rocks</skos:prefLabel>
+    <skos:altLabel>basalt</skos:altLabel>
+    <skos:altLabel>granite</skos:altLabel>
+    <skos:altLabel>slate</skos:altLabel>
+  </skos:Concept>
+</rdf:RDF>
+

@@ -1,0 +1,19 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  
+  <skos:Concept rdf:about="http://www.example.com/concepts#milk">
+    <skos:prefLabel>milk</skos:prefLabel>
+    <skos:narrower>
+      <skos:Collection>
+        <rdfs:label>milk by source animal</rdfs:label>
+        <skos:member rdf:resource="http://www.example.com/concepts#buffalomilk"/>
+        <skos:member rdf:resource="http://www.example.com/concepts#cowmilk"/>
+        <skos:member rdf:resource="http://www.example.com/concepts#goatmilk"/>
+        <skos:member rdf:resource="http://www.example.com/concepts#sheepmilk"/>
+      </skos:Collection>
+    </skos:narrower>
+  </skos:Concept>
+
+</rdf:RDF>

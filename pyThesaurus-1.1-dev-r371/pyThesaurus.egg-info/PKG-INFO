@@ -1,0 +1,42 @@
+Metadata-Version: 1.0
+Name: pyThesaurus
+Version: 1.1-dev-r371
+Summary: Ontology module with Thesaurus administration model. Developed for Platecom project.
+Home-page: http://www.platecom.com/productos/pythesaurus/
+Author: Inter-Cultura Consultora SRL - Ibai Sistemas SA - Eusko Ikaskuntza-Sociedad de Estudios Vascos
+Author-email: dev@inter-cultura.com
+License: GPL
+Description: Modulo de python para trabajar con Tesauros multilingues y multicontextual. El
+        thesauro se organiza en conceptos auto-referenciados al igual que lo hace
+        SKOS-Core. Almacena información de administración y semántica de los
+        conceptos, teniendo en cuenta los cambios de los autores y diferentes tipos de
+        palabras equivalentes, preferidas, más específicas y menos específicas.
+        También puede almacenar términos ocultos, como pueden ser aquellos con
+        errores ortográficos.
+        
+        Funcionalidades
+        
+        * Importa y Exporta en formato SKOS-Core, OWL, iDing, y Open-Thesaurus.
+        * Identifica de Conceptos similares.
+        * Optimizado para la consulta de términos.
+        * Soporta términos equivalentes, preferidos, ocultos, más específicos y
+        menos específicos.
+        
+        Instalación con Buildout
+        
+        pyThesaurus puede instalarse con easy_install. Desde la linea de comando tiene que ejecutar:
+        
+        easy_install pyThesaurus
+        
+        
+        
+        
+Keywords: platecom,thesaurus,thesauri,ontology
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Framework :: Buildout
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
