@@ -1,4 +1,5 @@
 from Tkinter import *
+from import_the import *
 #OOP is just what we need!
 class Gui(object):
     def __init__(self, master):
