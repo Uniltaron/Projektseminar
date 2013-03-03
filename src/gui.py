@@ -1,5 +1,6 @@
 from Tkinter import *
-from import_the import *
+#from import_the import *
+
 #OOP is just what we need!
 class Gui(object):
     def __init__(self, master):
@@ -17,7 +18,7 @@ class Gui(object):
         
         #"Quit"-Button
         self.endb = Button (frame, text="Quit", command = frame.quit)
-        self.endb.grid(row=1, column = 0)
+        self.endb.grid(row=1)
     
     #button1 command
     def new_the(self):
@@ -27,9 +28,7 @@ class Gui(object):
     def import_the(self):
         print "Importiert irgendwann mal einen bestehenden Thesaurus!"
         
-        
-#basic gui stuff        
 root = Tk()
-gui = Gui(root)
+app = Gui(root)
 
 root.mainloop()
