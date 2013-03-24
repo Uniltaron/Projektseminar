@@ -12,11 +12,55 @@ P.S.: Diese Datei ist eine Markdown-Datei. Mit anderen Worten sie besitzt eine s
 * Import XML (Subject.xml):
 
 	* finde DESCRIPTOR (Wurzelelement)
+	
+		>	import xml.etree.ElementTree as ET
+			tree = ET.parse('some.xml')
+			root = tree.getroot() 							 #Wurzel-Element xml holen
+			if root != 'concepts':
+				print 'falsches Format'
+				
+				else:	
+			
+			print root									 	# Objekt an Speicherstelle
+			print root.tag
+			print root.attrib 							# Attribute, die zum Tag gehoeren
+			print root.getchildren() 					# alle Kinderknoten auf der naechsten Ebene
+																# Pruefen, ob es weitere Kinderknoten gibt:
+												
+			if root.getchildren():
+			    print "Es gibt weitere Kinderknoten"
+			else:
+			    print "Keine weitere Kinderknoten vorhanden"
+			for child in root:
+			    print child.tag, child.attrib, child.text
+    
+			words = root.getchildren()
+
+			for descriptor in descriptoren:
+			    discriptor.tag, discriptor, attrib
+
+			for descriptor in root.findall('descriptor'):					#jedes "word finden"
+			    rank = descriptor.find('rank').text							# zu jedem word ein rank finden
+			    name = descriptor.get('name')
+			    print name, rank    
+
+
 	* finde alle TT,NT,UF,US,RT,BT
 	* setze mit deutschen Deskriptoren gleich
 	* intialisiere Deskriptoren (einzeln für jeden)
 	* Packe Deskriptoren in ein Thesaurus Dict
 	* Import von weiteren Formaten (JSON, CSV)
+		### Import von JSON
+		> import json
+
+			with open("import.json", "r") as json_input:
+				data = json.load(json_input)
+			print data, type(data)
+
+			new_data = {"Nachname": "Meier", "Vorname": "Anton"}	""hier müssen wir noch die Relationen einsetzen""	
+
+			with open("import.json", "w") as json_output:
+				json.dump(new_data, json_output)
 
 	=> erfolgreich geladen
 
@@ -29,7 +73,24 @@ P.S.: Diese Datei ist eine Markdown-Datei. Mit anderen Worten sie besitzt eine s
 
 	* zeige Deskiptor mit Relationen an
 	* zeige einzelne Relationen an
+	
+			> def find_trace(deskriptorsaetze,deskriptor,trace):
+			    if deskriptor:
+			        trace.append(deskriptor)
+			        find_trace(deskriptorsaetze, get_rel(deskriptorsaetze,deskriptor,'OB'),trace)
+			    return trace
+				 
 	* zeige Top-Term an
+	
+			> def make_tree(topterm,deskriptorsaetze,level=0):
+			    if level in tree_dict:
+			        tree_dict[level] = tree_dict[level]+ "  " + topterm
+			    else:
+			        tree_dict[level] = topterm
+			    if get_rel(deskriptorsaetze,topterm,'UB'):
+			        for term in get_rel(deskriptorsaetze,topterm,'UB'):
+			            if term:
+			                make_tree(term,deskriptorsaetze,level+1)
 
 * Bearbeiten:
 
