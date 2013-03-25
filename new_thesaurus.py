@@ -25,19 +25,12 @@ class Deskriptorsatz(object):
 
     def __repr__(self):
         return "\n   {ds}\n{line}\nBF:{bf}\nBS:{bs}\nSB:{sb}\nOB:{ob}\nUB:{ub}\nVB:{vb}\n{stars}\n".format(ds=self.ds, bf=self.bf, bs=self.bs,sb=self.sb,ob=self.ob,ub=self.ub,vb=self.vb, stars='°'*50,line='+'*50)
-
-    def speicher(self):
-	   try:
-		  data=[]
-		  for key in self.__dict__.key():
-		      data.extend(self.__dict__[key])
-		  thesaurus['Speicher'].extend(data)
-	   except:
-	       print"Problem bei der Speichermetode"
+	def speicher(self):
+		
 #======
 #Test
 #======
-			
+
 if __name__ == '__main__':
     d1=Deskriptorsatz('Hund')
 
