@@ -2,7 +2,11 @@
 #
 #
 #d
+
+#benutzen eine dict un alle Dskriptorsatz zu speichern
 thesaurus={}
+#benutzen eine dict um alle self.speicher zu speichern
+all_speicher={}
 class Deskriptorsatz(object):
     def __init__(self,ds,bf=[],bs=[],ob=[],ub=[],vb=[],sb=[]):
         try:
@@ -15,14 +19,15 @@ class Deskriptorsatz(object):
             self.ub=ub
             self.vb=vb
             self.sb=sb
-            self.speicher=[]
             self.collect_speicher()
             thesaurus[ds]=self
         except:
             print"Ja, Pech gehabt. Deskriptorsatz konnte nicht geladen werden"
 
     def __repr__(self):
-        return "\n {ds}\n{line}\nBF:{bf}\nBS:{bs}\nSB:{sb}\nOB:{ob}\nUB:{ub}\nVB:{vb}\n{stars}\n".format(ds=self.ds, bf=self.bf, bs=self.bs,sb=self.sb,ob=self.ob,ub=self.ub,vb=self.vb, stars='°'*50,line='+'*50)
+        return "\n {ds}\n{line}\nBF:{bf}\nBS:{bs}\nSB:{sb}\nOB:{ob}\nUB:{ub}\nVB:{vb}\n{stars}\n".format(
+            ds=self.ds, bf=self.bf, bs=self.bs,sb=self.sb,ob=self.ob,
+            ub=self.ub,vb=self.vb, stars='+'*50,line='+'*50)
 
     def collect_speicher(self):
         
@@ -34,31 +39,29 @@ class Deskriptorsatz(object):
         try:
             l=[]
             for ds in self.__dict__.keys():
-                if (ds is 'speicher'):
-                    if isinstance(self.__dict__[ds],basestring):
-                        l.append(self.__dict__[ds])
-                    elif isinstance(self.__dict__[ds],list):
-                        l.extend(self.__dict__[ds])
-                    self.speicher=l
-                return True
+                if (not ds is 'speicher') and (not ds is 'ds'):
+                    l.extend(self.__dict__[ds])
+            all_speicher[self.ds]=l
+            self.speicher=l
         except:
             print 'Exception'
-            return False
         
 
     def add_relation(self,term,relation):
         try:
-            if (not isinstance(term,basestring)) and (not isinstance(relation,basestring)):
-                raise Exception()
+            if ((relation in ['BF','BS','SB','OB','UB','VB'])
+                and (not term in self.speicher)):
+                relation=relation.lower()
+                self.__dict__[relation].append(term)
+                return True
             else:
-                if relation is 'BS':
-                    self.bs.append(term)
-                    self.collect_speicher()
-                    return True
-            
+                return False
         except:
-            print 'Exception:add_relation()'
-            return False
+            print "Exception:\nadd_relation()"
+        finally:
+            self.collect_speicher()
+
+        
 
     
 #======
@@ -66,7 +69,7 @@ class Deskriptorsatz(object):
 #======
 
 if __name__ == '__main__':
-    d1=Deskriptorsatz('Hund')
+    d1=Deskriptorsatz('Hund',['BBC'],['CNN'])
     T=thesaurus
     D=Deskriptorsatz
 

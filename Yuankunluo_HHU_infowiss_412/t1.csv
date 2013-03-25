@@ -1,0 +1,4 @@
+deskriptor,bf,bs,sb,ob,ub,vb,bglist
+Python,"['Bf1', 'Bf2']","['BS1', 'BS2']",['SB'],"['OB1', 'OB2']","['UB1', 'UB2']","['B1', 'VB2']","['Bf1', 'Bf2', 'BS1', 'BS2', 'OB1', 'OB2', 'B1', 'VB2', 'SB', 'Python', 'UB1', 'UB2']"
+Infowiss,"['Bf1', 'Bf2']","['BS1', 'BS2']",['SB'],"['OB1', 'OB2']","['UB1', 'UB2']","['VB2', 'VB1']","['Bf1', 'Bf2', 'BS1', 'BS2', 'OB1', 'OB2', 'VB2', 'VB1', 'SB', 'Infowiss', 'UB1', 'UB2']"
+Goggle,[],[],[],[],[],[],['Goggle']
