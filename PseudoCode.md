@@ -9,6 +9,8 @@ Viel Erfolg beim Code-Schnipsel-Suchen :‘D
 P.S.: Diese Datei ist eine Markdown-Datei. Mit anderen Worten sie besitzt eine spezielle Syntax. Damit kann man sie sogar "compilieren" und bekommt alles ordentlich ausgeschrieben. Zwar haben wir nun schon in Inhaltserschließung mit Markdown zu tun gehabt, aber hier nochmal ne Reihe von Befehlen, die vielleicht hilfreich sein können. Das soll keine Schikane sein, sondern einfach nur helfen zu strukturieren. Also nehmt es mir nicht übel...
 
 
+
+
 * Import XML (Subject.xml):
 
 	* finde DESCRIPTOR (Wurzelelement)
@@ -21,11 +23,11 @@ P.S.: Diese Datei ist eine Markdown-Datei. Mit anderen Worten sie besitzt eine s
 				
 				else:	
 			
-			print root									 	# Objekt an Speicherstelle
+			print root									 # Objekt an Speicherstelle
 			print root.tag
 			print root.attrib 							# Attribute, die zum Tag gehoeren
 			print root.getchildren() 					# alle Kinderknoten auf der naechsten Ebene
-																# Pruefen, ob es weitere Kinderknoten gibt:
+														# Pruefen, ob es weitere Kinderknoten gibt:
 												
 			if root.getchildren():
 			    print "Es gibt weitere Kinderknoten"
@@ -72,6 +74,8 @@ P.S.: Diese Datei ist eine Markdown-Datei. Mit anderen Worten sie besitzt eine s
 * Anzeigen:
 
 	* zeige Deskiptor mit Relationen an
+		
+	
 	* zeige einzelne Relationen an
 	
 			> def find_trace(deskriptorsaetze,deskriptor,trace):
