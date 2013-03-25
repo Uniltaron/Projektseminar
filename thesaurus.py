@@ -1,27 +1,31 @@
-# Gruppe 411
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+# Gruppe 412
 # Liesa Witt, Jan Simon Scheddler, Konrad Kowalke, Michael Weidauer
-
 # Deskriptorsatz Relationen werden festgelegt
 
-class Relations(object):
-	 def __init__(self, deskriptor, BF=[], BS=[], OB=[], UB=[] ,VB=[], SB=[] ): # ENGL BEDEUTUNGEN !!!!
-    
-	 	self._BF = Benutzt fuer 
-	 	self._BS = Benutztes Synonym
-	 	self._OB = Oberbegriff
-	 	self._UB = Unterbegriff
-	 	self._VB = Verwandter Begriff
-	 	self._SB = Spitzenbegriff
-      
-      thesaurus[deskriptor]=self
-      
-      
-      
-      
+thesaurus={}
+
+class Deskriptorsatz(object):
+    def __init__(self, deskriptor, BF=[], BS=[], OB=[], UB=[] ,VB=[], SB=[] ): # ENGL BEDEUTUNGEN !!!!
+        try:
+             if not isinstance(deskriptor,basestring):
+                 raise Exception()
+            self.deskriptor = deskriptor
+            self.BF = BF
+            self.BS = BS
+            self.OB = OB
+            self.UB = UB
+            self.VB = VB
+            self.SB = SB
+            thesaurus[deskriptor]=self
+        except:
+            print"Ja, scheiße! Klappt nich XD"
+"""
 # import einer csv datei
 
 import csv, sys
-	filname='anyfile.csv'
+	filename='anyfile.csv'
 	with open ('filname.csv', 'r') as data: 
 		reader = csv.reader(data, delimiter=';')
 		 try:
@@ -82,5 +86,5 @@ for descriptor in root.findall('DESCRIPTOR'):					#jedes "word finden"
     rank = descriptor.find('rank').text						# zu jedem word ein rank finden
     name = descriptor.get('name')
     print name, rank    
-    
+"""    
 
