@@ -7,8 +7,15 @@
 thesaurus={}
 #benutzen eine dict um alle self.speicher zu speichern
 all_speicher={}
+
 def search(term):
     """
+    search() ist eine Funktion, keine Methoden.
+    Sie suchen nach einen eigegebenen Term in ganz Thesaurus.
+    Wenn sie ein gleiches Term in deskriptor.speicher gefunden,
+    dann print diese deskriptor.
+
+    
     In Funktion oder Methoden,
     bitte schreiben Kommentar in disen Bloc mit drei mal(") un eine
     Docmentation Block zu machen.
@@ -44,11 +51,20 @@ class Deskriptorsatz(object):
             self.sb=sb
             thesaurus[ds]=self
         except:
-            print"Leider Pech gehabt. Deskriptorsatz konnte nicht geladen werden"
+            print"Leider Pech gehabt. Deskriptorsatz konnte nicht geladen werden."
         finally:
             self.collect_speicher()
 
-    def __repr__(self): #hier wird eine kleine TUI ausgegeben von dem, was wir in unserem Deskriptorsatz stehen haben
+    def __repr__(self):
+        """
+        mit # darf man alle Info in eine Zeile schreiben, das ist zu lang.
+        am besten , schreiben in Doumetation Block.
+
+        hier wird eine kleine TUI ausgegeben von dem,
+        was wir in unserem Deskriptorsatz stehen haben
+        
+        """
+        #hier wird eine kleine TUI ausgegeben von dem, was wir in unserem Deskriptorsatz stehen haben
         return "\n {ds}\n{line}\nBF:{bf}\nBS:{bs}\nSB:{sb}\nOB:{ob}\nUB:{ub}\nVB:{vb}\n{stars}\n".format(
             ds=self.ds, bf=self.bf, bs=self.bs,sb=self.sb,ob=self.ob,
             ub=self.ub,vb=self.vb, stars='*'*50,line='*'*50)
