@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Gruppe 412
+# Gruppe
 # Liesa Witt, Jan Simon Scheddler, Konrad Kowalke, Michael Weidauer
 # Deskriptorsatz Relationen werden festgelegt
 
@@ -8,9 +8,19 @@ thesaurus={}
 #benutzen eine dict um alle self.speicher zu speichern
 all_speicher={}
 def search(term):
+    """
+    In Funktion oder Methoden,
+    bitte schreiben Kommentar in disen Bloc mit drei mal(") un eine
+    Docmentation Block zu machen.
+    Alle wichtige Information muessen in disen Documentation Block geschiben.
+
+    Die Kommentar mit # nur funktioniert wir kommenta,um eine Satz zu erklaeren.
+    siehen unter-->.
+    """
     try:
         for ds in thesaurus.keys():
             if term in thesaurus[ds].speicher:
+                #-->Ueberprufen ob das Term in self.speicher
                 print thesaurus[ds]
             else:
                 return False
@@ -46,6 +56,12 @@ class Deskriptorsatz(object):
     def collect_speicher(self):
         '''
         was macht denn unser collect_speicher hier? 
+            Methode collcet_speicher():
+            Nach jeden Add Operator, ZB ruf add_relation,
+            dann
+            1.in finally Block von diesen add_relation wird
+            coeect_speicher() angeruft, um self.speicher zu erneuen,
+            2.und die all_tehsaurus zu erneuen.
         '''
         try:
             l=[]
@@ -59,7 +75,38 @@ class Deskriptorsatz(object):
             print 'Exception'
         
 
-    def add_relation(self,term,relation): #hier wird eine neue Relation in unseren Speicher eingefügt. Wird hier auch noch geprueft, ob die Relation bereits im Speicher ist?
+    def add_relation(self,term,relation):
+        """
+        hier wird eine neue Relation in unseren Speicher eingefügt.
+        Wird hier auch noch geprueft, ob die Relation bereits im
+        Speicher ist?
+
+        Ja, zuerst, ueberpruefen wir ob die relation is eine der in
+        der liste aufgelisten String, bwz. ['BF','BS'...]
+        Wenn ja, dann ueberpruefen wir ob das Term schon in self.speicher,
+        wenn nein, dann machen wir eine Hinzufugen.
+
+        Zuerst, wir machen relation(Argument) kleinschreiben,
+        weil in __inin__, jede Eingenschaft von self ist klein
+        schreiben.
+
+        Dann wir rufe self.__dict__an, bekommt wir alle information
+        von diese self in eine dict.
+        Mit self.__dict__[relation], !!jetzt, die relation hier ist
+        nicht die relation als Argument, sonder die relation in Agument
+        nach Kleingeschreibung.
+
+        jedes Mal wir bentuzen .append() methode un das neue Term in
+        besteimmten Relation hinzufugen.
+
+        Nach erfolgreicht Hinzufugen, mussen wir eine True return,
+        aber jedes mal wir self.speicher ernenen, obwohl das erfolgricht
+        hinzufuegt wurde oder nicht. Dehalb wir schreiben self.collect_speicher
+        in finally block.
+
+        Das bedeute, obwohl das erfolgrich oder nicht,
+        macht ein mal collect_speicher,dann alles wird erneut.
+        """
         try:
             if ((relation in ['BF','BS','SB','OB','UB','VB'])
                 and (not term in self.speicher)):
@@ -80,10 +127,10 @@ class Deskriptorsatz(object):
 #======
 
 if __name__ == '__main__':
-    d1=Deskriptorsatz('Verkehr',['Transport'],[''],['Verkehr'],['Stadtverkehr'],['Verkehrspolitik'])
+    d1=Deskriptorsatz('Verkehr',['Transport'],[],['Verkehr'],['Stadtverkehr'],['Verkehrspolitik'])
     T=thesaurus
     D=Deskriptorsatz
-    d2=D('Verkehrspolitik',['Transport Policy'],[''],['Verkehrspolitik'],['Nahverkehrspolitik'],['Verkehr'])
+    d2=D('Verkehrspolitik',['Transport Policy'],[],['Verkehrspolitik'],['Nahverkehrspolitik'],['Verkehr'])
 
 
 """
