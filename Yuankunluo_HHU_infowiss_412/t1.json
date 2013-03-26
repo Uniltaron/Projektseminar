@@ -1,0 +1,94 @@
+{
+    "Python": {
+        "bf": [
+            "Bf1", 
+            "Bf2"
+        ], 
+        "bs": [
+            "BS1", 
+            "BS2"
+        ], 
+        "ob": [
+            "OB1", 
+            "OB2"
+        ], 
+        "vb": [
+            "B1", 
+            "VB2"
+        ], 
+        "bglist": [
+            "Bf1", 
+            "Bf2", 
+            "BS1", 
+            "BS2", 
+            "OB1", 
+            "OB2", 
+            "B1", 
+            "VB2", 
+            "SB", 
+            "Python", 
+            "UB1", 
+            "UB2"
+        ], 
+        "sb": [
+            "SB"
+        ], 
+        "deskriptor": "Python", 
+        "ub": [
+            "UB1", 
+            "UB2"
+        ]
+    }, 
+    "Infowiss": {
+        "bf": [
+            "Bf1", 
+            "Bf2"
+        ], 
+        "bs": [
+            "BS1", 
+            "BS2"
+        ], 
+        "ob": [
+            "OB1", 
+            "OB2"
+        ], 
+        "vb": [
+            "VB2", 
+            "VB1"
+        ], 
+        "bglist": [
+            "Bf1", 
+            "Bf2", 
+            "BS1", 
+            "BS2", 
+            "OB1", 
+            "OB2", 
+            "VB2", 
+            "VB1", 
+            "SB", 
+            "Infowiss", 
+            "UB1", 
+            "UB2"
+        ], 
+        "sb": [
+            "SB"
+        ], 
+        "deskriptor": "Infowiss", 
+        "ub": [
+            "UB1", 
+            "UB2"
+        ]
+    }, 
+    "Goggle": {
+        "bf": [], 
+        "bs": [], 
+        "ob": [], 
+        "vb": [], 
+        "bglist": [
+            "Goggle"
+        ], 
+        "sb": [], 
+        "deskriptor": "Goggle", 
+        "ub": []
+    }
+}
