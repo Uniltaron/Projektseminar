@@ -1,9 +1,9 @@
-#
-#
-#
-#d
+# -*- coding: UTF-8 -*-
+# Gruppe 412
+# Liesa Witt, Jan Simon Scheddler, Konrad Kowalke, Michael Weidauer
+# Deskriptorsatz Relationen werden festgelegt
 
-#benutzen eine dict un alle Dskriptorsatz zu speichern
+#hier wird ein Dictionary erstellt um unseren Thesaurus zu speichern
 thesaurus={}
 #benutzen eine dict um alle self.speicher zu speichern
 all_speicher={}
@@ -21,7 +21,7 @@ def search(term):
 
 
 class Deskriptorsatz(object):
-    def __init__(self,ds,bf=[],bs=[],ob=[],ub=[],vb=[],sb=[]):
+    def __init__(self,ds,bf=[],bs=[],ob=[],ub=[],vb=[],sb=[]): #an dieser Stelle wird der Deskriptorsatz initialisiert
         try:
             if not isinstance(ds,basestring):
                 raise Exception()
@@ -34,18 +34,18 @@ class Deskriptorsatz(object):
             self.sb=sb
             thesaurus[ds]=self
         except:
-            print"Ja, Pech gehabt. Deskriptorsatz konnte nicht geladen werden"
+            print"Leider Pech gehabt. Deskriptorsatz konnte nicht geladen werden"
         finally:
             self.collect_speicher()
 
-    def __repr__(self):
+    def __repr__(self): #hier wird eine kleine TUI ausgegeben von dem, was wir in unserem Deskriptorsatz stehen haben
         return "\n {ds}\n{line}\nBF:{bf}\nBS:{bs}\nSB:{sb}\nOB:{ob}\nUB:{ub}\nVB:{vb}\n{stars}\n".format(
             ds=self.ds, bf=self.bf, bs=self.bs,sb=self.sb,ob=self.ob,
-            ub=self.ub,vb=self.vb, stars='+'*50,line='+'*50)
+            ub=self.ub,vb=self.vb, stars='*'*50,line='*'*50)
 
     def collect_speicher(self):
         '''
-        usg:xxxxx
+        was macht denn unser collect_speicher hier? 
         '''
         try:
             l=[]
@@ -59,7 +59,7 @@ class Deskriptorsatz(object):
             print 'Exception'
         
 
-    def add_relation(self,term,relation):
+    def add_relation(self,term,relation): #hier wird eine neue Relation in unseren Speicher eingefügt. Wird hier auch noch geprueft, ob die Relation bereits im Speicher ist?
         try:
             if ((relation in ['BF','BS','SB','OB','UB','VB'])
                 and (not term in self.speicher)):
@@ -74,17 +74,36 @@ class Deskriptorsatz(object):
             self.collect_speicher()
 
         
-
     
 #======
-#Test
+#Testdeskriptorsatz fuer Testlauf
 #======
 
 if __name__ == '__main__':
-    d1=Deskriptorsatz('Hund',['BBC'],['CNN'])
+    d1=Deskriptorsatz('Verkehr',['Transport'],[''],['Verkehr'],['Stadtverkehr'],['Verkehrspolitik'])
     T=thesaurus
     D=Deskriptorsatz
-    d2=D('BBC')
-    d3=D('CNN',['BBC'])
+    d2=D('Verkehrspolitik',['Transport Policy'],[''],['Verkehrspolitik'],['Nahverkehrspolitik'],['Verkehr'])
 
-    
+
+"""
+self,ds,bf=[],bs=[],ob=[],ub=[],vb=[],sb=[]
+
+VERKEHR
+--  ---------------
+BF  Transport
+BF  Verkehrswesen
+UB  Schifffahrt 
+UB  Stadtverkehr
+VB  Verkehrspolitik
+--  ---------------
+
+    VERKEHRSPOLITIK
+--  -------------------
+BF  Transport Policy
+OB  Verkehrspolitik
+UB  Luftverkehrspolitik
+UB  Nahverkehrspolitik
+VB  Verkehr
+--  -------------------
+"""    
