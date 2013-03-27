@@ -62,14 +62,14 @@ class deskriptorsatz(object):
             elif (self.bs):
                 print "Ein Nichtdeskriptor kann keine Relationen erhalten!\n"
             else:
-                if (relation is 'BF'):
+                if (relation == 'BF'):
                     if (term in self.bf):
                         print "'%s' ist bereits im Deskriptorsatz enthalten!\n" % term
                     else:
                         self.bf.append(term)
                         print "Dem Deskriptorsatz wurde '%s' als neues Synonym hinzugefügt!\n" % term
 
-                elif (relation is 'BS'):
+                elif (relation == 'BS'):
                     if (term in self.bs):
                         print "'%s' ist bereits im Deskriptorsatz enthalten!\n" % term
                     elif (self.bf or self.ob or self.ub or self.vb or self.sb):
@@ -78,7 +78,7 @@ class deskriptorsatz(object):
                         self.bs.append(term)
                         print "Dem Deskriptorsatz wurde '%s' als neues Symonym hinzugefügt!\n'%s' ist jetzt ein Nicht-Deskriptor!\n" % term, term
                         
-                elif (relation is 'OB'):
+                elif (relation == 'OB'):
                     if (self.ob):
                         print "Der Deskriptor hat bereits einen Oberbegriff!\n"
                     elif (term in self.ob):
@@ -89,7 +89,7 @@ class deskriptorsatz(object):
                         self.ob.append(term)
                         print "Dem Deskriptorsatz wurde '%s' als neuer Oberbegriff hinzugefügt!\n" % term
 
-                elif (relation is 'UB'):
+                elif (relation == 'UB'):
                     if (term in self.ub):
                         print "'%s' ist bereits im Deskriptorsatz enthalten!\n" % term
                     elif (term in self.ob):
@@ -98,14 +98,14 @@ class deskriptorsatz(object):
                         self.ub.append(term)
                         print "Dem Deskriptorsatz wurde '%s' als neuer Unterbegriff hinzugefügt!\n" % term
 
-                elif (relation is 'VB'):
+                elif (relation == 'VB'):
                     if (term in self.vb):
                         print "'%s' ist bereits im Deskriptorsatz enthalten!\n" % term
                     else:
                         self.vb.append(term)
                         print "Dem Deskriptorsatz wurde '%s' als neuer verwandter Begriff hinzugefügt!\n" % term
 
-                elif (relation is 'SB'):
+                elif (relation == 'SB'):
                     if (term in self.sb):
                         print "'%s' ist bereits im Deskriptorsatz enthalten!\n" % term
                     else:
@@ -176,7 +176,8 @@ class deskriptorsatz(object):
 def suche_thesaurus(term):
     try:
         if thesaurus.has_key(term):
-            print "success" 
+            print "success"
+            term.ausgabe() 
             
     except:
         print "Fehler bei der Suche"
