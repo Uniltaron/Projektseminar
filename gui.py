@@ -1,6 +1,7 @@
 from Tkinter import *
+import tkFileDialog
 #let's make it this way, gui gets the thesaurus Methods...
-from new_thesaurus import *
+import new_thesaurus as nt
 #OOP is just what we need!
 class Gui(object):
 	def __init__(self, master):
@@ -21,7 +22,7 @@ class Gui(object):
 
 		#Define Options for File-Dialogue:
 		self.file_opt = options = {}
-		options['defaultextension'] = '.txt'
+		options['defaultextension'] = '.xml'
 		options['filetypes'] = [('xml files', '.xml'), ('json files', '.json'), ('csv files', '.csv')]
 		options['initialdir'] = 'C:\\'
 		options['initialfile'] = 'subject.xml'
@@ -33,7 +34,8 @@ class Gui(object):
 		#wie soll das ausschaun...?
 
 	def import_the(self):
-		the_datei = tself.askopenfilename(**self.file_opt)
+		the_datei = tkFileDialog.askopenfile(**self.file_opt)
+		#nt.import(the_datei)
 		
 
 
