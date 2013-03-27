@@ -53,8 +53,8 @@ class deskriptorsatz(object):
 
     def add_relation(self,term,relation):
         try:
-            term = term.capitalize()
-            relation = relation.upper()
+           # term = term.capitalize()
+            #relation = relation.upper()
             if (not isinstance(term,str)) and (not isinstance(relation,str)):
                 raise Exception()
             elif (term is self.deskr):
@@ -124,8 +124,8 @@ class deskriptorsatz(object):
 
     def delete_relation(self,term,relation):
         try:
-            term = term.capitalize()
-            relation = relation.upper() 
+            #term = term.capitalize()
+            #relation = relation.upper() 
             if (not isinstance(term,str)) and (not isinstance(relation,str)):
                 raise Exception()
             else:
@@ -173,6 +173,14 @@ class deskriptorsatz(object):
             print "Beim Löschen des Terms ist ein Fehler aufgetreten!\n"
 
 
+def suche_thesaurus(term):
+    try:
+        if thesaurus.has_key(term):
+            print "success" 
+            
+    except:
+        print "Fehler bei der Suche"
+    
 
 
 
