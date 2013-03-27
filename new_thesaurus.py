@@ -2,11 +2,12 @@
 # Gruppe
 # Liesa Witt, Jan Simon Scheddler, Konrad Kowalke, Michael Weidauer
 # Deskriptorsatz Relationen werden festgelegt
-
+import collections
 #hier wird ein Dictionary erstellt um unseren Thesaurus zu speichern
-thesaurus={}
+#Zur besseren Weiterverarbeitung ein *geordnetes* Dictionary
+thesaurus=collections.OrderedDict()
 #benutzen eine dict um alle self.speicher zu speichern
-all_speicher={}
+all_speicher=collections.OrderedDict()
 
 def search(term):
     """
