@@ -38,7 +38,6 @@ class Gui(object):
 		#nt.import(the_datei)
 		
 
-
 root = Tk()
 app = Gui(root)
 
