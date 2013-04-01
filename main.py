@@ -1,15 +1,16 @@
+ï»¿# -*- coding: utf-8 -*-
 #Projektseminar WissensreprÃ¤sentation
 #Konrad Kowalke, Jan Simon Scheddler, Michael Weidauer, Liesa Witt
-# -*- coding: utf-8 -*-
 
 # Thesaurus befindet sich innerhalb der Klasse Deskriptorsatz
-# Deskriptorsätze werden anhand dessen key im dictionary 'Deskriptorsatz.thesaurus' aufgerufen
+# DeskriptorsÃ¤tze werden anhand dessen key im dictionary 'Deskriptorsatz.thesaurus' aufgerufen
+import collections
 
 class Deskriptorsatz(object):
-    thesaurus = {}
+    thesaurus = collections.OrderedDict()
 # Legt einen neuen Deskriptorsatz an, dieser enthÃ¤lt noch keine Relationen
 # ÃœberprÃ¼ft zuerst, ob es sich beim Namen des Deskriptorsatzes um einen String handelt 
-# Die Instanz wird dem dictionary 'thesaurus' unter dessen Name hinzugefügt
+# Die Instanz wird dem dictionary 'thesaurus' unter dessen Name hinzugefÃ¼gt
 # Bsp.: Deskriptorsatz('Hund')      legt einen neuen Deskriptorsatz Hund an und speichert diesen im dictionary Deskriptorsatz.thesaurus 
 
     def __init__(self,deskr):
@@ -29,8 +30,8 @@ class Deskriptorsatz(object):
         except:
             print"Der Deskriptorsatz konnte nicht angelegt werden!\n"
 
-# Löscht einen Deskriptorsatz
-# Allderdings verschwindet die Instanz erst dann ganz, wenn alle Referenzen auf diese Instanz gelöscht wurden
+# LÃ¶scht einen Deskriptorsatz
+# Allderdings verschwindet die Instanz erst dann ganz, wenn alle Referenzen auf diese Instanz gelÃ¶scht wurden
     def __del__(self):
         try:
             del Deskriptorsatz.thesaurus[deskr]
@@ -47,10 +48,10 @@ class Deskriptorsatz(object):
 
 
 
-# Fügt einem Deskriptorsatz die Instanz eines eingegebenen Terms als Relationen hinzu
+# FÃ¼gt einem Deskriptorsatz die Instanz eines eingegebenen Terms als Relationen hinzu
 # Erfordert, dass der Term bereits als Deskriptorsatz angelegt wurde
-# Überprüft zuerst, ob es sich bei der Eingabe um einen String handelt
-# Fügt im Umkehrschluss der Instanz des eingegebenen Terms die Instanz des Diskriptorsatzes hinzu 
+# ÃœberprÃ¼ft zuerst, ob es sich bei der Eingabe um einen String handelt
+# FÃ¼gt im Umkehrschluss der Instanz des eingegebenen Terms die Instanz des Diskriptorsatzes hinzu 
 
     def add_relation(self,term,relation):
         try:
@@ -184,7 +185,7 @@ class Deskriptorsatz(object):
                         self.sb.remove(Deskriptorsatz.thesaurus[term])
                         print "'%s' wurde erfolgreich entfernt!\n" % term
         except:
-            print "Beim Löschen des Terms ist ein Fehler aufgetreten!\n"
+            print "Beim LÃ¶schen des Terms ist ein Fehler aufgetreten!\n"
 
 
     def suche(term):
